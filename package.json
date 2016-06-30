@@ -1,6 +1,6 @@
 {
   "name": "request.hpkp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "request.js HTTP Public Key Pinning (HPKP) drop-in support",
   "main": "index.js",
   "dependencies": {

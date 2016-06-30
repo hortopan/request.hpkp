@@ -12,15 +12,37 @@ function Request(){
 }
 
 function makeHelper(obj, verb) {
-	obj[verb] = function helper(options, f) {
-		if (typeof options === 'object') {
-			options.method = verb.toUpperCase();
-		} else if (typeof options === 'string') {
-			options = {
-				method: verb.toUpperCase(),
-				uri: options
-			};
+
+	obj[verb] = function helper() {
+
+		var f = null;
+		var options = {
+			method: verb.toUpperCase(),
 		}
+
+		for (var i in arguments){
+			var argument = arguments[i];
+
+			switch(typeof argument){
+
+				case 'function':
+				f = argument;
+				break;
+
+				case 'string':
+				options.uri =  argument;
+				break;
+
+				case 'object':
+				for (var k in argument){
+					options[k] = argument[k];
+				}
+				break;
+
+			}
+
+		}
+
 		return obj(options, f);
 	};
 }
