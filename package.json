@@ -1,0 +1,33 @@
+{
+  "name": "request.hpkp",
+  "version": "0.0.1",
+  "description": "request.js HTTP Public Key Pinning (HPKP) drop-in support",
+  "main": "index.js",
+  "dependencies": {
+    "node-forge": "^0.6.40",
+    "node-hashes": "^0.1.0",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "request.js",
+    "hpkp",
+    "public",
+    "key",
+    "pinning",
+    "https"
+  ],
+  "author": "Alex Hortopan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hortopan/request.hpkp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hortopan/request.hpkp/issues"
+  },
+  "homepage": "https://github.com/hortopan/request.hpkp#readme"
+}
