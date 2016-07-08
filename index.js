@@ -43,7 +43,11 @@ function makeHelper(obj, verb) {
 
 		}
 
-		return obj(options, f);
+		if (f){
+			return obj(options, f);
+		}
+		
+		return obj(options);
 	};
 }
 
